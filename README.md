@@ -1,4 +1,15 @@
-# Como publicar (GitHub Pages + domínio)
-1. Suba estes arquivos para um repositório público (ex.: `leitejoia`).
-2. Em Settings → Pages, escolha Deploy from a branch (main/root).
-3. Para usar seu domínio (www.seudominio.com.br): crie o arquivo CNAME com esse domínio e aponte o CNAME do DNS para seuusuario.github.io.
+# Site — Leite Jóia (estático, React via CDN)
+
+## Como usar
+1. Descompacte o arquivo ZIP.
+2. Abra `index.html` no navegador (duplo clique). Não precisa instalar nada.
+3. Para publicar no GitHub Pages:
+   - Crie um repositório e envie estes arquivos na branch `main`.
+   - Nas configurações do repo, ative **Pages** apontando para a raiz (`/`).
+
+## Estrutura
+- `index.html` — carrega Tailwind e React via CDN e monta o app.
+- `app.jsx` — código do site (pode editar aqui).
+- `assets/` — catálogo e PDF "nossa história" já inclusos.
+
+Se quiser uma versão Next.js/Vite, me peça que gero outra pasta pronta com build.
