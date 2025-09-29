@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Queijos artesanais">
-  <rect width="800" height="600" fill="#fffdf7"/>
-  <g fill="none" stroke="#0d5f4f" stroke-width="3" opacity=".5">
-    <circle cx="200" cy="320" r="120"/>
-    <rect x="420" y="260" width="240" height="160" rx="18"/>
-  </g>
-  <text x="400" y="160" text-anchor="middle" font-family="system-ui, Segoe UI, Roboto" font-size="48" fill="#0d5f4f">Leite Jóia</text>
-</svg>
