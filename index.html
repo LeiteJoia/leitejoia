@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leite Jóia — Queijos Artesanais de Adamantina</title>
+  <meta name="description" content="Associação de produtores de leite e queijos artesanais de Adamantina/SP." />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">
+        <img src="assets/img/logo.svg" alt="Logotipo Leite Jóia"><span>Leite Jóia</span>
+      </a>
+      <nav><ul>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#receitas">Receitas</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="pill">Queijos artesanais • Agricultura familiar</span>
+        <h1>Sabor de fazenda, carinho de família.</h1>
+        <p>Queijos e laticínios feitos à mão em Adamantina/SP. Conheça nossos produtos e receitas.</p>
+        <div class="cta-row">
+          <a class="cta" href="#produtos">Ver produtos</a>
+          <a class="cta alt" href="#receitas">Ver receitas</a>
+        </div>
+      </div>
+      <div class="hero-card"><img src="assets/img/placeholder.svg" alt=""></div>
+    </section>
+
+    <section id="produtos">
+      <h2>Produtos</h2>
+      <p class="sub">Do frescal à burrata — tudo artesanal.</p>
+      <div class="toolbar">
+        <input id="busca" type="search" placeholder="Buscar produto">
+        <select id="categoria">
+          <option value="todas">Todas categorias</option>
+          <option value="queijos">Queijos</option>
+          <option value="emporio">Empório</option>
+        </select>
+      </div>
+      <div id="lista-produtos" class="grid" role="list"></div>
+    </section>
+
+    <section id="receitas">
+      <h2>Receitas</h2>
+      <div id="lista-receitas" class="list"></div>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre</h2>
+      <div class="about">
+        <div class="card">
+          <p><strong>Leite Jóia</strong> é uma associação da agricultura familiar em Adamantina/SP, com produção manual de queijos.</p>
+        </div>
+        <div class="card">
+          <h3>Nossa loja</h3>
+          <p>Além dos queijos, temos itens de empório selecionados.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="contact">
+        <div class="card">
+          <p><strong>Telefone:</strong> (18) 3522-2289</p>
+          <p><strong>Instagram:</strong> <a href="https://instagram.com/leitejoia" target="_blank" rel="noopener">/leitejoia</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:leite.joia@terra.com.br">leite.joia@terra.com.br</a></p>
+          <p><strong>Endereço:</strong> Rua Quintino Bocaiúva, s/nº — Bairro Itamarati, Adamantina/SP</p>
+        </div>
+        <div class="card">
+          <iframe class="map" title="Mapa" src="https://maps.google.com/maps?q=Rua%20Quintino%20Bocai%C3%BAva%2C%20Itamarati%2C%20Adamantina%2FSP&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container foot-grid">
+      <small>CNPJ 06.277.373/0001-90</small>
+      <small style="text-align:right">© <span id="ano"></span> Leite Jóia</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
