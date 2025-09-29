@@ -1,25 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Leite Jóia — A marca do nosso leite</title>
-    <meta name="description" content="Queijos e lácteos artesanais produzidos por famílias — Leite Jóia." />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leite Jóia - A Marca do Nosso Leite</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
-      .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    </style>
-  </head>
-  <body class="bg-white text-neutral-900">
-    <div id="root"></div>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel" data-type="module" src="./app.jsx"></script>
-    <noscript>Ative o JavaScript para visualizar este site.</noscript>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Leite Jóia">
+                <span>Leite Jóia</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#historia">Nossa História</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#manifesto">Nosso Manifesto</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Leite Jóia. Aprecie com calma e com alma!</h1>
+                <p>Alimentos puros e íntegros, que geram saúde e prazer para todos.</p>
+                <a href="#produtos" class="btn">Conheça Nossos Produtos</a>
+            </div>
+        </section>
+
+        <section id="historia" class="container">
+            <h2>Nossa História</h2>
+            <p>Somos mais que uma marca de leite e derivados. [cite_start]No início, nosso objetivo era a legalização dos pequenos produtores que vendiam leite de porta em porta, muitas vezes em garrafas PET, o que representava um risco à saúde pública. [cite: 10] [cite_start]A partir de 2003, os produtores passaram a pasteurizar o leite antes da venda, garantindo segurança e qualidade para os consumidores. [cite: 11]</p>
+            [cite_start]<p>Com o tempo, a Associação cresceu, ganhou mais associados e começou a atender o mercado local com uma linha diversificada de produtos, como mussarela, queijo branco, manteiga e a refinada mussarela de Búfala. [cite: 12, 13] [cite_start]Nossos produtos se destacam pelo sabor e leveza, pois conciliamos processos modernos com as técnicas artesanais de fabricação. [cite: 14]</p>
+            <p>O Leite Jóia é um negócio de impacto social. Atuamos com base no comércio justo, trabalhando em parceria com famílias produtoras. [cite_start]Isso significa remuneração justa, cuidado com o bem-estar animal, sustentabilidade e o fortalecimento da agricultura familiar. [cite: 15, 16]</p>
+        </section>
+
+        <section id="produtos" class="container">
+            <h2>Infinidade de Produtos</h2>
+            <div class="product-grid">
+                <div class="card">
+                    <img src="images/queijo-branco.jpg" alt="Queijo Branco">
+                    <h3>Queijo Branco</h3>
+                    <p>Rico em cálcio, ideal para dietas leves e saudáveis. Muito sabor.</p>
+                </div>
+                <div class="card">
+                    <img src="images/nozinho.jpg" alt="Nozinho">
+                    <h3>Nozinho</h3>
+                    <p>Saudável e prático, ótimo para petiscar.</p>
+                </div>
+                 <div class="card">
+                    <img src="images/requeijao-corte.jpg" alt="Requeijão de Corte">
+                    <h3>Requeijão de Corte</h3>
+                    <p>Cremoso e saboroso, perfeito para acompanhamentos.</p>
+                </div>
+                <div class="card">
+                    <img src="images/parmesao.jpg" alt="Parmesão">
+                    <h3>Parmesão</h3>
+                    <p>Envelhecido e rico em sabor e cálcio.</p>
+                </div>
+                <div class="card">
+                    <img src="images/doce-de-leite.jpg" alt="Doce de Leite">
+                    <h3>Doce de Leite</h3>
+                    <p>Fonte de energia e rico em sabor, perfeito para sobremesas.</p>
+                </div>
+                <div class="card">
+                    <img src="images/manteiga.jpg" alt="Manteiga Artesanal">
+                    <h3>Manteiga Artesanal</h3>
+                    <p>Só Creme de leite, sal. Natural, sem conservantes, rica em vitaminas A e D.</p>
+                </div>
+                 <div class="card">
+                    <img src="images/palito.jpg" alt="Palito">
+                    <h3>Palito</h3>
+                    <p>Fonte de proteínas, ideal para lanches rápidos. Ele desfia, uma delícia.</p>
+                </div>
+                 <div class="card">
+                    <img src="images/provolone.jpg" alt="Provolone">
+                    <h3>Provolone</h3>
+                    <p>Ideal para tábuas de frios e receitas gourmets.</p>
+                </div>
+                 <div class="card">
+                    <img src="images/mussarela-bufala.jpg" alt="Mussarela de Búfala">
+                    <h3>Mussarela de Búfala</h3>
+                    <p>Sabor inigualável, macia e úmida, mais proteínas, menos colesterol e baixo teor de lactose. Produto de alta qualidade para amantes de queijo.</p>
+                </div>
+                 <div class="card">
+                    <img src="images/mussarela.jpg" alt="Mussarela">
+                    <h3>Mussarela</h3>
+                    <p>Possui um sabor suave e textura macia.</p>
+                </div>
+                 <div class="card">
+                    <img src="images/burrata.jpg" alt="Burrata">
+                    <h3>Burrata</h3>
+                    <p>É um queijo de massa fresca, recheado com massa fresca e creme de leite. Uma iguaria perfeita para servir com pães e torradas.</p>
+                </div>
+                 <div class="card">
+                    <img src="images/manta-bufala.jpg" alt="Manta de Búfala">
+                    <h3>Manta de Búfala</h3>
+                    <p>É aberta em formato de folha. Sua textura cremosa e versátil permite que ela seja servida recheada como rocambole.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="manifesto" class="container">
+            <h2>Nosso Manifesto e Propósito</h2>
+            <div class="manifesto-grid">
+                <div class="manifesto-item">
+                    <h3>Visão</h3>
+                    [cite_start]<p>Uma cadeia produtiva do leite mais justa e mais saudável. [cite: 22]</p>
+                </div>
+                <div class="manifesto-item">
+                    <h3>Missão</h3>
+                    [cite_start]<p>Regenerar as relações e restabelecer os vínculos entre consumidores e produtores através do leite. [cite: 25]</p>
+                </div>
+            </div>
+            <div class="proposito">
+                <ul>
+                    [cite_start]<li>✓ Queremos que as pessoas tenham acesso a alimentos saudáveis e íntegros. [cite: 18]</li>
+                    [cite_start]<li>✓ Queremos que saibam de onde vem o seu alimento e sua história. [cite: 19, 20]</li>
+                    [cite_start]<li>✓ Queremos amplificar a voz dos pequenos produtores que geram impacto socioambiental. [cite: 21]</li>
+                </ul>
+            </div>
+             <div class="valores-grid">
+                <div class="valor-card">
+                    <img src="images/produto-honesto.png" alt="Ícone Produto Honesto">
+                    <h4>Produto Honesto</h4>
+                    [cite_start]<p>Produzimos alimentos que são sempre fontes de bem estar, saúde e prazer para todos. [cite: 26]</p>
+                </div>
+                <div class="valor-card">
+                    <img src="images/como-e-feito.png" alt="Ícone Como é Feito Importa">
+                    <h4>Como a gente faz importa</h4>
+                    [cite_start]<p>Escolhemos tecnologias e processos que melhoram a qualidade, o bem estar das pessoas e a preservação do meio ambiente. [cite: 27]</p>
+                </div>
+                <div class="valor-card">
+                    <img src="images/ganho-compartilhado.png" alt="Ícone Ganho Compartilhado">
+                    <h4>Ganho Compartilhado</h4>
+                    [cite_start]<p>Criamos novas e melhores oportunidades de vida para nossos colaboradores, parceiros e sociedade. [cite: 28]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="container">
+            <h2>Onde nos Encontrar</h2>
+            <p>Você encontra a qualidade e o sabor do Leite Jóia nos melhores supermercados e padarias da sua cidade. Trabalhamos para fortalecer o comércio local e levar até você um produto sempre fresco.</p>
+            <div class="contact-info">
+                <p><strong>Telefone:</strong> (XX) XXXX-XXXX</p>
+                <p><strong>Email:</strong> contato@leitejoia.com.br</p>
+                <p><strong>Endereço:</strong> Rua da Qualidade, 123, Centro, Sua Cidade - SP</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Leite Jóia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
