@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leitejoia.com.br/sitemap.xml
