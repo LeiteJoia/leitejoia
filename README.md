@@ -10,7 +10,7 @@ Site estático moderno e responsivo para divulgação dos produtos e valores da 
 - `assets/js/main.js`
 
 ## Como publicar no GitHub Pages
-1. Crie um repositório chamado `leitejoia-site`.
+1. Crie um repositório chamado `leitejoia`.
 2. Envie todos os arquivos da pasta deste projeto (mantenha a estrutura de pastas).
 3. Em **Settings › Pages**, selecione a branch `main` e a pasta `/ (root)`.
 4. Se preferir usar domínio próprio (ex: `leitejoia.com.br`), crie os registros DNS no Registro.br:
