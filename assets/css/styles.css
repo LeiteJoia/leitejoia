@@ -81,3 +81,14 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
   .nav-toggle { display:block; }
   .products-grid { grid-template-columns: 1fr; }
 }
+/* --- Aumentar logo no header --- */
+.site-header .nav { height: 88px; }   /* antes 72px */
+.brand img { 
+  width: 64px;                        /* antes 40px */
+  height: 64px;                       /* antes 40px */
+}
+
+/* Mobile: menu drop-down precisa saber a nova altura do header */
+@media (max-width: 640px){
+  .menu { top: 88px; }                /* antes 72px */
+}
