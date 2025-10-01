@@ -92,3 +92,8 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 @media (max-width: 640px){
   .menu { top: 88px; }                /* antes 72px */
 }
+/* Botão "Onde encontrar" com texto branco no menu */
+.menu a.btn.btn-primary,
+.menu a.btn.btn-primary:visited {
+  color: #fff;           /* texto branco */
+}
