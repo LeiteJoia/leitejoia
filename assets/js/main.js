@@ -27,3 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
+document.addEventListener('DOMContentLoaded', () => {
+  const v = document.querySelector('.hero-video');
+  if (v) {
+    const tentar = () => v.play().catch(() => {});
+    v.addEventListener('canplay', tentar, { once: true });
+    tentar();
+  }
+});
+
