@@ -16,7 +16,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 .site-header { position: sticky; top:0; z-index: 40; background:white; border-bottom:1px solid #e5e7eb; }
 .site-header .nav { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; }
 .brand { display:flex; align-items:center; gap:.5rem; font-weight:800; font-size:1.125rem; letter-spacing:.2px; }
-.brand img { width:40px; height:40px; border-radius:12px; }
+.brand img { width:76px; height:px; border-radius:12px; }
 .menu { display:flex; gap:1rem; align-items:center; }
 .menu a { padding:.5rem .75rem; border-radius:10px; font-weight:600; color:#334155; }
 .menu a:hover { background:#f1f5f9; }
@@ -60,7 +60,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 .site-footer a { color: #e5e7eb; }
 .footer-grid { display:grid; grid-template-columns: 2fr 1fr 1fr; gap:2rem; }
 .brand-inline { display:flex; gap:.5rem; align-items:center; }
-.brand-inline img { width:36px; height:36px; border-radius:10px; }
+.brand-inline img { width:78px; height:px; border-radius:10px; }
 
 .cta-bar { background: var(--primary); color:white; padding:1.25rem 0; }
 .cta-bar .row { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
