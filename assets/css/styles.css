@@ -100,11 +100,11 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 /* Vídeo no hero */
 .hero-card .hero-video {
   width: 100%;
-  aspect-ratio: 16/9;     /* ajuste se quiser 16/12 etc. */
+  aspect-ratio: 16/9;     /* ajuste se quiser outro formato */
   height: auto;
   display: block;
   border-radius: var(--radius);
-  object-fit: cover;      /* preenche sem distorcer */
+  object-fit: cover;
   box-shadow: 0 10px 40px rgba(2,6,23,.12);
   border: 1px solid #e2e8f0;
 }
