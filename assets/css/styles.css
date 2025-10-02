@@ -97,4 +97,13 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 .menu a.btn.btn-primary:visited {
   color: #fff;           /* texto branco */
 }
+.hero-video{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:16px; /* combine com seu .hero-card */
+  object-fit:cover;
+  aspect-ratio:16/9;            /* mantém proporção */
+  max-height:min(60vh, 520px);   /* não estoura a dobra */
+}
 
