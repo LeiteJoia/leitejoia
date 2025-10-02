@@ -92,3 +92,31 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
   color: #fff;
   filter: brightness(0.95);
 }
+/* ====== Hero: tamanho e alinhamento do vídeo ====== */
+
+/* limita a largura do bloco do vídeo e alinha à direita no desktop */
+.hero-card{
+  max-width: 620px;      /* ajuste fino: 540–720px */
+  margin-left: auto;     /* encosta à direita dentro do grid */
+}
+
+/* garante proporção e evita “esticar” */
+.hero-card .hero-video{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;    /* mude para 16/10 ou 4/3 se preferir */
+  object-fit: cover;     /* preenche sem distorcer */
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(2,6,23,.12);
+  border: 1px solid #e2e8f0;
+}
+
+/* opcional: limite de altura se o vídeo estiver muito alto em telas grandes */
+@media (min-width: 1280px){
+  .hero-card .hero-video{ max-height: 380px; }
+}
+
+/* no mobile, centraliza o bloco */
+@media (max-width: 960px){
+  .hero-card{ margin: 0 auto; max-width: 680px; }
+}
