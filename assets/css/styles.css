@@ -183,3 +183,41 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
   .section.hero-card.highlight h1 { margin: 0 0 .4rem; }
   .section.hero-card.highlight p { margin: 0; }
 }
+/* Botão "Onde encontrar" com texto branco no menu */
+.menu a.btn.btn-primary,
+.menu a.btn.btn-primary:visited {
+  color: #fff;           /* texto branco */
+}
+
+.menu a.btn.btn-primary:hover {
+  color: #fff;           /* mantém branco no hover */
+  filter: brightness(0.95);
+}
+/* ====== Hero: tamanho e alinhamento do vídeo ====== */
+
+/* limita a largura do bloco do vídeo e alinha à direita no desktop */
+.hero-card{
+  max-width: 620px;      /* ajuste fino: 540–720px */
+  margin-left: auto;     /* encosta à direita dentro do grid */
+}
+
+/* garante proporção e evita “esticar” */
+.hero-card .hero-video{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;    /* mude para 16/10 ou 4/3 se preferir */
+  object-fit: cover;     /* preenche sem distorcer */
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(2,6,23,.12);
+  border: 1px solid #e2e8f0;
+}
+
+/* opcional: limite de altura se o vídeo estiver muito alto em telas grandes */
+@media (min-width: 600px){
+  .hero-card .hero-video{ max-height: 380px; }
+}
+
+/* no mobile, centraliza o bloco */
+@media (max-width: 960px){
+  .hero-card{ margin: 0 auto; max-width: 680px; }
+}
