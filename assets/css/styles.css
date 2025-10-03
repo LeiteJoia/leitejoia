@@ -141,3 +141,25 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
   aspect-ratio: 4/3;                /* 4:3 fica equilibrado; use 1/1 se preferir quadrado */
   object-fit: cover;                /* preenche sem distorcer */
 }
+/* ===== Produtos: centralizar catalogo.png no desktop ===== */
+@media (min-width: 961px){
+  .section.hero-card.highlight .container{
+    max-width: 1000px;       /* faixa um pouco mais estreita (opcional) */
+    margin: 0 auto;          /* centraliza a faixa */
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* <<< centraliza conteúdo */
+    text-align: center;
+  }
+
+  .section.hero-card.highlight .catalogo-img{
+    max-width: 760px;         /* ajuste fino: 700–900px */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 16px auto 0;      /* <<< centraliza a imagem */
+    border-radius: var(--radius);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(2,6,23,.06);
+  }
+}
