@@ -146,3 +146,27 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 @media (min-width: 1280px){
   .products-grid { grid-template-columns: repeat(3, 1fr); }
 }
+/* ===== Produtos: centralizar o catálogo (apenas desktop) ===== */
+@media (min-width: 961px){
+  /* centraliza título, texto e imagem dentro da faixa de destaque */
+  .section.hero-card.highlight .container{
+    max-width: 1000px;               /* opcional: faixa um pouco mais estreita */
+    margin: 0 auto;                   /* centraliza a faixa */
+    display: flex;
+    flex-direction: column;
+    align-items: center;              /* <<< centraliza o conteúdo */
+    text-align: center;
+  }
+
+  /* garante que a imagem do catálogo fique centralizada e com largura controlada */
+  .section.hero-card.highlight img{
+    max-width: 760px;                 /* ajuste fino do tamanho */
+    width: 100%;
+    height: auto;
+    margin: 16px auto 0;              /* <<< centraliza a imagem */
+    display: block;
+    border-radius: var(--radius);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(2,6,23,.06);
+  }
+}
