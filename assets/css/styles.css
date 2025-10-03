@@ -211,13 +211,3 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
   box-shadow: 0 10px 40px rgba(2,6,23,.12);
   border: 1px solid #e2e8f0;
 }
-
-/* opcional: limite de altura se o vídeo estiver muito alto em telas grandes */
-@media (min-width: 600px){
-  .hero-card .hero-video{ max-height: 380px; }
-}
-
-/* no mobile, centraliza o bloco */
-@media (max-width: 960px){
-  .hero-card{ margin: 0 auto; max-width: 680px; }
-}
