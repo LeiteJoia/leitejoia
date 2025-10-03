@@ -163,3 +163,23 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
     box-shadow: 0 10px 30px rgba(2,6,23,.06);
   }
 }
+/* Produtos: apertar o espaço do título "Catálogo" no topo */
+.section.hero-card.highlight { 
+  padding: 1.25rem 0;                 /* antes: clamp(2rem, 5vw, 4rem) */
+}
+
+.section.hero-card.highlight h1 {
+  margin: 0 0 .5rem;                  /* reduz margem inferior do H1 */
+  line-height: 1.1;                   /* mantém leitura bonita */
+}
+
+.section.hero-card.highlight p {
+  margin: 0.25rem 0 0;                /* reduz margem do parágrafo abaixo */
+}
+
+/* (opcional) Desktop: um pouco mais compacto ainda */
+@media (min-width: 961px){
+  .section.hero-card.highlight { padding: 1rem 0; }
+  .section.hero-card.highlight h1 { margin: 0 0 .4rem; }
+  .section.hero-card.highlight p { margin: 0; }
+}
