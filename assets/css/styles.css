@@ -60,7 +60,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 .site-footer a { color: #e5e7eb; }
 .footer-grid { display:grid; grid-template-columns: 2fr 1fr 1fr; gap:2rem; }
 .brand-inline { display:flex; gap:.5rem; align-items:center; }
-.brand-inline img { width:78px; height:px; border-radius:10px; }
+.brand-inline img { width:76px; height:px; border-radius:10px; }
 
 .cta-bar { background: var(--primary); color:white; padding:1.25rem 0; }
 .cta-bar .row { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
