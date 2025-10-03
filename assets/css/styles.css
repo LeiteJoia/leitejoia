@@ -182,3 +182,18 @@ header.site-header .brand img {
 @media (max-width: 640px){
   .menu { top: 88px; }
 }
+/* ===== Produtos: catálogo centralizado no desktop ===== */
+@media (min-width: 961px){
+  /* centraliza todo o bloco do topo da página de Produtos */
+  .section.hero-card.highlight .container{
+    max-width: 1000px;      /* ajuste opcional da largura da faixa */
+    margin: 0 auto;         /* centraliza a faixa */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* centraliza conteúdo */
+    text-align: center;
+  }
+
+  /* centraliza e limita a imagem do catálogo (capa.png ou qualquer uma) */
+  .section.hero-card.highlight img{
+    max-width: 760px;       /* ajuste fino: 700–900px */
