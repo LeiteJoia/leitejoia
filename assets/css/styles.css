@@ -120,3 +120,29 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 @media (max-width: 600px){
   .hero-card{ margin: 0 auto; max-width: 680px; }
 }
+/* ===== Produtos: alinhar e limitar o catálogo do topo ===== */
+.section.hero-card.highlight .container { 
+  max-width: 1000px;                /* deixa a faixa do topo mais estreita */
+}
+.section.hero-card.highlight img {
+  max-width: 900px;                 /* tamanho máximo do catálogo */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 12px auto;                /* centraliza */
+  border-radius: var(--radius);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(2,6,23,.06);
+}
+
+/* ===== Produtos: fotos dos cards com tamanho uniforme ===== */
+.product-card img{
+  width: 100%;
+  aspect-ratio: 4/3;                /* 4:3 fica equilibrado; use 1/1 se preferir quadrado */
+  object-fit: cover;                /* preenche sem distorcer */
+}
+
+/* Opcional: reduzir o nº de colunas em telas muito largas p/ dar mais respiro */
+@media (min-width: 1280px){
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+}
