@@ -260,3 +260,9 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 @media (max-width: 640px){
   .menu { top: 88px; }
 }
+.no-click {
+  pointer-events: none;   /* não clica */
+  cursor: default;        /* cursor normal */
+  color: inherit;         /* mesma cor do texto */
+  text-decoration: none;  /* sem sublinhado */
+}
