@@ -248,3 +248,15 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarel
 @media (max-width: 960px){
   .hero-card{ margin: 0 auto; max-width: 680px; }
 }
+/* Logo maior no topo */
+.site-header .nav { height: 88px; }     /* aumente a altura do header */
+.brand img {
+  width: 80px;                          /* antes era ~40–52px */
+  height: 80px;                         /* mantenha proporção */
+  border-radius: 12px;
+}
+
+/* menu mobile acompanha a nova altura */
+@media (max-width: 640px){
+  .menu { top: 88px; }
+}
