@@ -1,203 +1,734 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Início - Leite Jóia</title>
-  <meta name="description" content="Leite Jóia: laticínios artesanais da agricultura familiar. Mussarela, requeijões, queijos especiais e mais – direto de Adamantina/SP." />
-  <link rel="canonical" href="https://www.leitejoia.com.br/" />
-  <meta property="og:title" content="Início - Leite Jóia" />
-  <meta property="og:description" content="Leite Jóia: laticínios artesanais da agricultura familiar. Mussarela, requeijões, queijos especiais e mais – direto de Adamantina/SP." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/images/logo.png" />
-  <meta name="theme-color" content="#1e40af" />
-  <link rel="icon" href="assets/images/logo.png" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script defer src="assets/js/main.js"></script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Leite Jóia", "url": "https://www.leitejoia.com.br/", "logo": "https://leitejoia.com.br/assets/images/logo.png", "sameAs": ["https://instagram.com/leitejoia"], "address": {"@type": "PostalAddress", "streetAddress": "Rua Quintino Bocaiúva, s/nº, Bairro Itamarati", "addressLocality": "Adamantina", "addressRegion": "SP", "postalCode": "17805-306", "addressCountry": "BR"}, "telephone": "+55-18-3522-2289"}</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leite Jóia | A Marca do Nosso Leite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0F172A;
+            --gold: #D4AF37;
+            --light-cream: #FAFAFA;
+            --white: #FFFFFF;
+            --text-main: #334155;
+            --text-light: #64748B;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ROLAGEM SUAVE PARA OS CLIQUES NO MENU */
+        html { scroll-behavior: smooth; }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-cream);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* NAVEGAÇÃO / MENU TOPO */
+        .navbar {
+            background-color: var(--navy);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border-bottom: 2px solid var(--gold);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+        .nav-links li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            transition: var(--transition);
+        }
+        .nav-links li a:hover {
+            color: var(--gold);
+        }
+
+        /* HERO SECTION E LOGO */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--navy) 0%, #1E293B 100%);
+            color: var(--white);
+            padding: 8rem 2rem 4rem 2rem; 
+            text-align: center;
+            border-bottom: 4px solid var(--gold);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+        
+        .logo-hero {
+            width: 150px; height: 150px; 
+            object-fit: cover; border-radius: 50%;
+            border: 4px solid var(--gold); box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            margin-bottom: 1.5rem; background-color: var(--white);
+        }
+
+        .hero h1 { font-size: 3.2rem; margin-bottom: 0.5rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+        .hero p { font-size: 1.15rem; font-weight: 300; max-width: 750px; margin: 0 auto; line-height: 1.6; }
+        
+        .hero-buttons { margin-top: 2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .btn-outline { background-color: transparent; border: 2px solid var(--gold); color: var(--white); text-decoration: none; padding: 12px 25px; border-radius: 8px; font-weight: bold; transition: var(--transition); }
+        .btn-outline:hover { background-color: rgba(212, 175, 55, 0.1); transform: translateY(-2px); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+
+        .section-title { text-align: center; font-size: 2.8rem; color: var(--navy); margin-bottom: 1rem; }
+        .section-subtitle { text-align: center; color: var(--gold); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 4rem; font-weight: 600; font-family: 'Montserrat', sans-serif;}
+
+        /* HISTÓRIA E PILARES */
+        .history-section { max-width: 900px; margin: 0 auto 5rem auto; text-align: center; scroll-margin-top: 100px;}
+        .history-section h2 { font-size: 2.8rem; color: var(--navy); margin-bottom: 2rem; }
+        .history-section p { font-size: 1.15rem; color: var(--text-main); margin-bottom: 1.5rem; text-align: justify; }
+        
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 4rem; }
+        .feature-card { background: var(--white); padding: 2.5rem 1.5rem; border-radius: 16px; border-top: 4px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-card h3 { color: var(--navy); font-size: 1.3rem; margin-bottom: 1rem; font-family: 'Montserrat', sans-serif; }
+        .feature-card p { font-size: 0.95rem; color: var(--text-light); text-align: center;}
+
+        /* TERROIR E BÚFALA SECTION */
+        .terroir-section, .bufala-section { background-color: var(--navy); color: var(--white); padding: 6rem 2rem; border-radius: 30px; margin: 2rem 0; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        .terroir-section .section-title, .bufala-section .section-title { color: var(--white); }
+        .bufala-section .section-subtitle { margin-bottom: 1rem; }
+        .bufala-text { text-align: center; max-width: 800px; margin: 0 auto 4rem auto; font-size: 1.1rem; color: #CBD5E1; }
+
+        /* GRID E CARDS DE PRODUTOS */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-bottom: 4rem; }
+        
+        .product-card {
+            background: var(--white); border-radius: 16px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06); transition: var(--transition);
+            border: 1px solid #E2E8F0; display: flex; flex-direction: column;
+        }
+        .terroir-section .product-card, .bufala-section .product-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 175, 55, 0.3); }
+        .terroir-section .product-card h3, .bufala-section .product-card h3 { color: var(--gold); }
+        .terroir-section .product-card p, .bufala-section .product-card p { color: #CBD5E1; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); border-color: var(--gold); }
+
+        /* ESTILOS DOS CARTÕES NUTRICIONAIS */
+        .nutrition-card { background: rgba(212, 175, 55, 0.05) !important; border: 1px solid var(--gold) !important; justify-content: center; align-items: center; text-align: center; padding-top: 2rem; }
+        .nutrition-icon { font-size: 4rem; margin-top: 1rem; margin-bottom: 0.5rem; }
+        .nutrition-card .product-info { text-align: center; }
+
+        .product-image { width: 100%; height: 260px; object-fit: cover; display: block; border-bottom: 3px solid var(--gold); }
+        .product-video { width: 100%; height: 260px; object-fit: cover; display: block; border-bottom: 3px solid var(--gold); background-color: #000; }
+        
+        .product-image-placeholder { display: flex; align-items: center; justify-content: center; height: 260px; background-color: #EDF2F7; color: #64748B; font-size: 0.95rem; font-weight: 600; text-align: center; padding: 1rem; border-bottom: 3px solid var(--gold); }
+        .terroir-section .product-image-placeholder, .bufala-section .product-image-placeholder { background-color: rgba(255,255,255,0.05); color: #94A3B8; }
+
+        .product-info { padding: 2rem; text-align: left; flex-grow: 1; }
+        .product-info h3 { font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem; }
+        .product-info p { font-size: 0.95rem; color: var(--text-light); line-height: 1.6; }
+        
+        .tag { display: inline-block; background: var(--gold); color: var(--white); padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 1px; }
+        .tag-dark { background: var(--navy); }
+        .tag-pure { background: #10B981; }
+        .tag-leve { background: #0EA5E9; }
+        .tag-exclusive { background: #E11D48; }
+
+        /* BOTÕES */
+        .btn-primary { display: inline-block; background-color: var(--gold); color: var(--white); text-decoration: none; padding: 12px 25px; border-radius: 8px; font-weight: bold; transition: var(--transition); border: none; cursor: pointer; }
+        .btn-primary:hover { background-color: #B5952F; transform: translateY(-2px); }
+
+        /* VÍDEOS E EXPERIÊNCIAS */
+        .experience-section { margin-top: 6rem; }
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; margin-top: 3rem; }
+        .video-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+        .video-wrapper { width: 100%; height: 300px; background: #000; }
+        .video-wrapper video, .video-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .video-info { padding: 2.5rem; }
+        .video-info h3 { font-size: 1.8rem; color: var(--navy); margin-bottom: 1rem; }
+
+        /* PROJETOS E CERTIFICAÇÕES */
+        .projects-section { background-color: var(--white); border-radius: 30px; padding: 5rem 2rem; margin-top: 6rem; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #E2E8F0; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; margin-top: 3rem; }
+
+        /* RECEITAS */
+        .receitas-box { text-align: center; padding: 5rem 2rem; background: var(--white); border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); margin-bottom: 4rem; border-top: 4px solid var(--gold); scroll-margin-top: 100px; }
+
+        /* FAIXA PEDIDOS E REVENDA */
+        .reseller-section { background-color: var(--gold); color: var(--navy); text-align: center; padding: 4rem 2rem; }
+        .reseller-section h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .reseller-section p { font-size: 1.15rem; margin-bottom: 2rem; font-weight: 600; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+        /* FOOTER PROFISSIONAL COM IMAGEM PEQUENA */
+        footer { background: var(--navy); color: var(--white); padding: 4rem 2rem; border-top: 5px solid var(--gold); }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; text-align: left; }
+        
+        .footer-small-img { 
+            width: 100%; 
+            max-width: 250px; 
+            border-radius: 12px; 
+            border: 3px solid var(--gold); 
+            margin-bottom: 1.5rem; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            display: block;
+        }
+        
+        .footer-col h3 { color: var(--white); margin-bottom: 1.5rem; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col p { color: #CBD5E1; margin-bottom: 0.8rem; font-size: 0.95rem; line-height: 1.6; }
+        .footer-logo-text { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); margin-bottom: 1rem; display: block; }
+        .footer-bottom { text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #64748B; font-size: 0.85rem; }
+
+        /* RESPONSIVO PARA O CELULAR */
+        @media (max-width: 768px) {
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.8rem; padding: 0.5rem 0; }
+            .nav-links li a { font-size: 0.75rem; }
+            .navbar { padding: 0.5rem 1rem; position: relative; } 
+            
+            .hero { padding: 4rem 1.5rem 3rem 1.5rem; }
+            .logo-hero { width: 120px; height: 120px; margin-bottom: 1rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .hero-buttons { flex-direction: column; gap: 1rem; padding: 0 1rem; }
+            .btn-outline, .btn-primary { width: 100%; text-align: center; } 
+
+            .container { padding: 3rem 1.5rem; }
+            .section-title { font-size: 2rem; }
+            .section-subtitle { font-size: 1rem; margin-bottom: 2rem; }
+            .history-section h2 { font-size: 2rem; }
+            .history-section p { font-size: 1rem; text-align: left; } 
+
+            .terroir-section, .bufala-section { padding: 4rem 1.5rem; border-radius: 20px; margin: 1.5rem 0; }
+
+            .product-grid { grid-template-columns: 1fr; gap: 1.5rem; } 
+            .product-image, .product-video, .product-image-placeholder { height: 210px; } 
+            .product-info { padding: 1.5rem; }
+            .product-info h3 { font-size: 1.35rem; }
+            .product-info p { font-size: 0.9rem; }
+
+            .video-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .features-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+            .footer-container { text-align: center; grid-template-columns: 1fr; gap: 2.5rem; }
+            .footer-small-img { margin: 0 auto 1.5rem auto; } 
+            .reseller-section h2 { font-size: 1.8rem; }
+            .reseller-section p { font-size: 1rem; }
+        }
+    </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/images/logo.png" alt="Leite Jóia logo" />
-      <span>Leite Jóia</span>
-    </a>
-    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
-    <nav id="site-menu" class="menu">
-      <a href="index.html">Início</a>
-      <a href="produtos.html">Produtos</a>
-      <a href="sobre.html">Sobre nós</a>
-      <a href="receitas.html">Receitas</a>
-      <a href="contato.html" class="btn btn-primary">Onde encontrar</a>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#receitas">Receitas</a></li>
+            <li><a href="#onde-encontrar">Onde encontrar</a></li>
+        </ul>
     </nav>
-  </div>
-</header>
 
-
-<main>
-  <section class="hero">
-    <div class="container wrap">
-      <div>
-        <p class="kicker">A marca do nosso leite</p>
-<h1>Do campo à sua mesa, sem atalhos.</h1>
-<p>Leite e queijos puros, processo artesanal e rastreabilidade de ponta a ponta.</p>
-
-        <div class="hero-badges">
-          <span class="badge">Bem-estar animal</span>
-          <span class="badge">Comércio justo</span>
-          <span class="badge">Produção artesanal</span>
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <img src="logo-leite-joia.jpg" alt="Logo Leite Jóia" class="logo-hero" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="logo-placeholder" style="display:none; color: var(--gold); margin-bottom: 1rem;">(Coloque sua logo: logo-leite-joia.jpg)</div>
+            
+            <h1>Leite Jóia</h1>
+            <p><strong>A marca do nosso leite. Do campo à sua mesa, sem atalhos.</strong><br>Leite e queijos puros, processo artesanal e rastreabilidade de ponta a ponta.</p>
+            
+            <div class="hero-buttons">
+                <a href="#produtos" class="btn-primary">Ver Catálogo Completo</a>
+                <a href="#sobre" class="btn-outline">Nossa História</a>
+            </div>
         </div>
-        <div class="cta-buttons">
-          <a class="btn btn-primary" href="produtos.html">Conheça nossos produtos</a>
-          <a class="btn btn-outline" href="sobre.html">Nossa história</a>
-        </div>
-      
-      </div>
-     <div class="hero-figure hero-card">
-  <video
-    class="hero-video"
-    muted
-    autoplay
-    playsinline
-    loop
-    preload="auto"
-    poster="assets/images/capa.png"
-  >
-    <source src="assets/videos/videoc.mp4" type="video/mp4" />
-    <!-- (opcional, melhora compatibilidade) -->
-    <source src="assets/videos/videoc.webm" type="video/webm" />
-    Seu navegador não suporta vídeo em HTML5.
-  </video>
-  <noscript>
-    <img src="assets/images/capa.png" alt="Catálogo de produtos Leite Jóia" />
-  </noscript>
-</div>
+    </header>
 
-
-    </div>
-  </section>
-
-  <section class="section">
     <div class="container">
-      <h2>Por que escolher o <span style="color:var(--primary)">Leite Jóia</span>?</h2>
-      <div class="grid-4">
-        <div class="card">
-          <div class="icon">🐄</div>
-          <h3>Do campo à mesa</h3>
-          <p class="muted">Rastreabilidade e cuidado em cada etapa, valorizando o trabalho de famílias produtoras da região.</p>
+
+        <section class="history-section" id="sobre">
+            <h2>Nossa História e Propósito</h2>
+            <p>Somos mais que uma marca de leite e derivados. Nossa história começou em 2003 com um objetivo muito claro: a legalização dos produtores de leite que entregavam o produto em garrafas pets de porta em porta, o que causava um sério problema de saúde pública.</p>
+            <p>Com a implementação da pasteurização antes da venda, a população passou a ter segurança qualitativa em relação ao produto adquirido. Com o tempo, a Associação cresceu, diversificando para a produção de queijos brancos, manteiga, mussarela e a refinada linha de búfala.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🐄</div>
+                    <h3>Do campo à mesa</h3>
+                    <p>Rastreabilidade e cuidado em cada etapa, valorizando o trabalho de famílias produtoras da nossa região.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🥛</div>
+                    <h3>Puro e íntegro</h3>
+                    <p>Sem aditivos, corantes ou conservantes. Sabor autêntico e frescor artesanal que você sente na primeira mordida.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧀</div>
+                    <h3>Portfólio completo</h3>
+                    <p>Queijos, requeijões, manteigas, licores e doces — incluindo nossa exclusiva linha com 100% leite de búfala.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Comércio justo</h3>
+                    <p>Remuneração digna ao produtor, impacto socioambiental positivo e fortalecimento da agricultura familiar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h2 class="section-title">O Máximo e Melhor</h2>
+            <p class="section-subtitle">Excelência Reconhecida no Estado de São Paulo</p>
+
+            <div class="projects-grid">
+                
+                <div class="product-card" style="border-top: 5px solid var(--gold);">
+                    <img src="foto-rota-do-queijo.jpg" alt="Rotas do Queijo Paulista" class="product-image" style="object-fit: contain; padding: 1.5rem; background-color: var(--white);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">Coloque foto/selo aqui (foto-rota-do-queijo.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag tag-exclusive">Destaque Regional</span>
+                        <h3>Rotas do Queijo Paulista</h3>
+                        <p>Temos o imenso orgulho de fazer parte da oficial <strong>Rotas do Queijo Paulista</strong>, colocando Adamantina em grande destaque neste seleto mapa do turismo gastronômico. Um atestado inquestionável da nossa excelência absoluta.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <video class="product-video" controls muted loop autoplay>
+                        <source src="rotavideo.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                    <div class="product-info">
+                        <span class="tag">Integração Local</span>
+                        <h3>Rota das Frutas de Adamantina</h3>
+                        <p>Como apoiadores do turismo e do comércio regional, integramos a Rota das Frutas de Adamantina. Essa parceria fortalece as cadeias produtivas nativas e impulsiona a união de toda a rede de produtores da nossa terra.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <video class="product-video" controls muted loop autoplay>
+                        <source src="qualiagro.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                    <div class="product-info">
+                        <span class="tag tag-dark">Garantia de Qualidade</span>
+                        <h3>Programa Qualiagro</h3>
+                        <p>Nossa excelência técnica é respaldada pelas diretrizes do Qualiagro. Trabalhamos em rigoroso alinhamento com a Secretaria de Agricultura e Abastecimento do Estado de São Paulo, garantindo integridade nutricional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="section-title" id="produtos" style="margin-top: 6rem; scroll-margin-top: 100px;">Infinidade de Produtos</h2>
+        <p class="section-subtitle">Nossa Tradição Artesanal e Empório</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="foto-queijo-branco.jpg" alt="Queijo Branco" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-queijo-branco.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Frescor</span>
+                    <h3>Queijo Branco</h3>
+                    <p>O frescor do campo em sua forma pura. Queijo de massa fresca, textura leve e umidade na medida certa. Uma escolha nutritiva e rica em cálcio, perfeita para dietas balanceadas.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-nozinho.jpg" alt="Nozinho" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-nozinho.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Prático</span>
+                    <h3>Nozinho</h3>
+                    <p>O clássico lanche em formato divertido. Queijo de massa filada, macio e elástico, que desfia a cada mordida. Saudável e prático, é a escolha ideal para petiscar a qualquer hora.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-cabacinha.jpg" alt="Queijo Cabacinha" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-cabacinha.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Massa Filada</span>
+                    <h3>Queijo Cabacinha</h3>
+                    <p>Queijo moldado de forma artesanal em formato de gota. Conhecido por sua textura macia e perfeitamente elástica. Encontre-o nas versões tradicional e maravilhosamente defumado.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-requeijao-corte.jpg" alt="Requeijão de Corte" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-requeijao-corte.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Tradição</span>
+                    <h3>Requeijão de Corte</h3>
+                    <p>A tradição da fazenda na sua mesa. Com textura firme para fatiar, derrete suavemente na boca entregando um sabor cremoso e marcante. Ideal para acompanhar doces ou cafés.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-parmesao.jpg" alt="Parmesão" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-parmesao.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Cura Longa</span>
+                    <h3>Parmesão</h3>
+                    <p>Paciência e tempo transformados em sabor. Queijo de cura longa, textura granulada e sabor intenso. Rico em cálcio, é perfeito para ralar sobre massas ou degustar puro.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-doce-leite.jpg" alt="Doce de Leite" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-doce-leite.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Sobremesa</span>
+                    <h3>Doce de Leite</h3>
+                    <p>A verdadeira essência do interior. Produzido lentamente até atingir a cor caramelo ideal e uma textura incrivelmente aveludada. Fonte de energia e puro conforto no paladar.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-manteiga.jpg" alt="Manteiga Artesanal" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-manteiga.jpg)</div>
+                <div class="product-info">
+                    <span class="tag tag-pure">Puro Sabor</span>
+                    <h3>Manteiga Artesanal</h3>
+                    <p>A pureza que transforma qualquer receita. Feita exclusivamente com o frescor do creme de leite e uma pitada de sal. Textura macia, livre de conservantes e rica em vitaminas.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-palito.jpg" alt="Palito" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-palito.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Proteico</span>
+                    <h3>Palito</h3>
+                    <p>Diversão e nutrição em cada fio. Queijo de massa filada com textura elástica, ideal para lanches rápidos. Uma excelente fonte de proteínas que desfia facilmente.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-sol-oeste-paulista.jpg" alt="Provolone Sol do Oeste Paulista" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-sol-oeste-paulista.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Defumado Natural</span>
+                    <h3>Provolone Sol do Oeste Paulista</h3>
+                    <p>Nosso Provolone Ecológico! Sabor inigualável proveniente da defumação natural com galhos de árvores frutíferas e folhas caídas, garantindo um processo 100% sustentável.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-manta.jpg" alt="Manta" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-manta.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Gourmet</span>
+                    <h3>Manta</h3>
+                    <p>A tela em branco para a sua criatividade. Queijo filado aberto em uma fina camada elástica. Perfeita para receber recheios especiais e ser servida como um elegante rocambole.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-queijo-coalho.jpg" alt="Queijo Coalho" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-queijo-coalho.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Churrasco</span>
+                    <h3>Queijo Coalho</h3>
+                    <p>O rei do churrasco brasileiro. Queijo de massa firme que cria uma crosta dourada e crocante na grelha, mantendo o interior perfeitamente macio e suculento.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-meia-cura.jpg" alt="Meia Cura" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-meia-cura.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Clássico Paulista</span>
+                    <h3>Meia Cura</h3>
+                    <p>Com tempo exato de maturação, atinge o equilíbrio ideal entre uma textura firme e um miolo macio. Seu sabor levemente amendoado harmoniza brilhantemente com pães.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-requeijao-cremoso.jpg" alt="Requeijão Cremoso" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-requeijao-cremoso.jpg)</div>
+                <div class="product-info">
+                    <span class="tag">Café da Manhã</span>
+                    <h3>Requeijão Cremoso</h3>
+                    <p>A cremosidade que abraça o paladar. Textura lisa e espalhável, com sabor lácteo suave. Rico em proteínas e cálcio, transforma as suas refeições em momentos especiais.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-bebidas-artesanais.jpg" alt="Bebidas e Licores" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-bebidas-artesanais.jpg)</div>
+                <div class="product-info">
+                    <span class="tag tag-dark">Celebração</span>
+                    <h3>Bebidas & Licores</h3>
+                    <p>Cachaças artesanais saborizadas (café, rapadura, amburana com mel, figo e coco), licores exóticos de pitaia, jatobá e gengibre, além de excelentes vinhos, sucos de uva e o puro mel local.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-emporio-terra.jpg" alt="Empório da Terra" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display:none;">(foto-emporio-terra.jpg)</div>
+                <div class="product-info">
+                    <span class="tag tag-pure">Sabores do Campo</span>
+                    <h3>Empório da Terra</h3>
+                    <p>Complemente sua mesa com geleias artesanais, pimentas especiais, criações com gengibre e jatobá, ovos caipiras fresquinhos, pães, bolos, bolachas, rapadura e seletos cafés da nossa terra.</p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <div class="icon">🥛</div>
-          <h3>Puro e íntegro</h3>
-          <p class="muted">Sem aditivos, corantes ou conservantes. Sabor autêntico e frescor que você sente.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🧀</div>
-          <h3>Portfólio completo</h3>
-          <p class="muted">Queijos, requeijões, manteigas e doces — inclusive linha com 100% leite de búfala.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🤝</div>
-          <h3>Comércio justo</h3>
-          <p class="muted">Remuneração digna ao produtor, impacto socioambiental positivo e fortalecimento da agricultura familiar.</p>
-        </div>
-      </div>
+
+        <section class="bufala-section">
+            <h2 class="section-title">Mussarela de Búfala</h2>
+            <p class="section-subtitle">Produzido com 100% Leite de Búfala</p>
+            <p class="bufala-text">Sabor inigualável, mais macia e úmida, mais proteínas, menos colesterol, mais cálcio e baixo teor de lactose. É um produto de alta qualidade, perfeito para os amantes de queijo.</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="foto-mussarela-bufala.jpg" alt="Mussarela de Búfala" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">(foto-mussarela-bufala.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag tag-dark">100% Búfala</span>
+                        <h3>Mussarela</h3>
+                        <p>Possui um sabor suave, refinado e uma textura incrivelmente macia que derrete na boca.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="foto-nozinho-bufala.jpg" alt="Nozinho de Búfala" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">(foto-nozinho-bufala.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag tag-dark">100% Búfala</span>
+                        <h3>Nozinho</h3>
+                        <p>Muito macio e bem branquinho. Ótimo para aperitivo, combinado com tomates e manjericão, em saladas, tortas e receitas especiais.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="foto-manta-bufala.jpg" alt="Manta de Búfala" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">(foto-manta-bufala.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag tag-dark">100% Búfala</span>
+                        <h3>Manta de Búfala</h3>
+                        <p>É aberta em formato de folha. Sua maciez e textura sem igual permitem que ela seja servida recheada como um delicioso rocambole.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="foto-burrata-bufala.jpg" alt="Burrata" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">(foto-burrata-bufala.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag tag-dark">100% Búfala</span>
+                        <h3>Burrata</h3>
+                        <p>A verdadeira joia. Uma mussarela incrivelmente macia por fora, generosamente recheada com massa fresca (stracciatella) por dentro. Combina com massas e torradas.</p>
+                    </div>
+                </div>
+
+                <div class="product-card nutrition-card">
+                    <div class="nutrition-icon">💪</div>
+                    <div class="product-info">
+                        <span class="tag tag-gold" style="background: var(--gold); color: var(--navy);">Foco em Resultados</span>
+                        <h3>Proteína Limpa</h3>
+                        <p>Com um teor altíssimo de proteínas de alto valor biológico, nossa linha de búfala é ideal para dietas de alta performance, auxiliando no ganho e na definição da massa magra.</p>
+                    </div>
+                </div>
+
+                <div class="product-card nutrition-card">
+                    <div class="nutrition-icon">🌿</div>
+                    <div class="product-info">
+                        <span class="tag tag-pure">Bem-estar</span>
+                        <h3>Digestão Super Leve</h3>
+                        <p>Naturalmente com menos colesterol e baixíssimo teor de lactose. A escolha mais inteligente para uma rotina de alimentação 100% limpa, saudável e livre de desconfortos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="terroir-section">
+            <h2 class="section-title">A Jóia da Região</h2>
+            <p class="section-subtitle">O Exclusivo Terroir de Adamantina</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="foto-queijo-cafe.jpg" alt="Queijo com Café" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">Coloque sua foto aqui (foto-queijo-cafe.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag">Exclusivo</span>
+                        <h3>Curado no Café</h3>
+                        <p>Maturação especial com notas intensas do café cultivado em Adamantina. Aroma inconfundível.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="foto-queijo-jatoba.jpg" alt="Queijo de Jatobá" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">Coloque sua foto aqui (foto-queijo-jatoba.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag">Iguaria Local</span>
+                        <h3>Cadeia do Jatobá</h3>
+                        <p>Curado com licor de Jatobá e recheado com creme artesanal da fruta nativa da região.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="foto-queijo-cachaca.jpg" alt="Queijo na Cachaça" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">Coloque sua foto aqui (foto-queijo-cachaca.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag">Tradição</span>
+                        <h3>Banhado na Cachaça</h3>
+                        <p>Absorve a personalidade e as notas frutadas da tradicional cachaça de figo da nossa terra.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="foto-queijo-mel.jpg" alt="Queijo com Mel" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">Coloque sua foto aqui (foto-queijo-mel.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag">Harmonização</span>
+                        <h3>Ao Mel de Adamantina</h3>
+                        <p>O equilíbrio primoroso entre a textura firme do queijo curado e a doçura natural do mel local.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <video class="product-video" controls muted loop autoplay>
+                        <source src="video-fabricacao-terroir.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                    <div class="product-info">
+                        <span class="tag tag-exclusive">Bastidores</span>
+                        <h3>A Arte da Fabricação</h3>
+                        <p>Acompanhe de perto o processo artesanal, o cuidado no manuseio e a dedicação que transformam o nosso leite puro nas verdadeiras joias do terroir paulista.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <video class="product-video" controls muted loop autoplay>
+                        <source src="video-imprensa.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                    <div class="product-info">
+                        <span class="tag tag-dark">Na Mídia</span>
+                        <h3>Destaque na Imprensa</h3>
+                        <p>Acompanhe as reportagens e entrevistas especiais que celebram a presença do Leite Jóia na <strong>Rotas do Queijo Paulista</strong> e o resgate cultural do nosso exclusivo Queijo de Jatobá.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="receitas-box" id="receitas">
+            <h2 class="section-title">Receitas com a Nossa Jóia</h2>
+            <p class="section-subtitle">Os favoritos da casa na sua cozinha</p>
+            
+            <div class="product-grid" style="margin-top: 3rem;">
+                
+                <div class="product-card" style="text-align: left; border-top: 4px solid var(--gold);">
+                    <img src="foto-receita-nozinho.jpg" alt="Receita com Nozinho" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">(foto-receita-nozinho.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag tag-leve">Prático e Saudável</span>
+                        <h3>Salada Leve de Nozinho</h3>
+                        <p>Para um lanche rápido e nutritivo, junte nosso Nozinho desfiado com tomates cereja, manjericão fresco e um fio de azeite. Uma opção rica em proteínas, leve e com o frescor do campo.</p>
+                    </div>
+                </div>
+
+                <div class="product-card" style="text-align: left; border-top: 4px solid var(--gold);">
+                    <img src="foto-receita-meiacura.jpg" alt="Receita Pão de Queijo de Frigideira" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">(foto-receita-meiacura.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag tag-pure">Clássico</span>
+                        <h3>Pão de Queijo de Frigideira</h3>
+                        <p>Rale o nosso Queijo Meia Cura e misture com polvilho e um ovo para fazer um pão de queijo de frigideira rápido. O sabor amendoado do Meia Cura derretido deixa essa receita com gostinho de tradição.</p>
+                    </div>
+                </div>
+
+                <div class="product-card" style="text-align: left; border-top: 4px solid var(--gold);">
+                    <img src="foto-receita-mussarela.jpg" alt="Receita Lasanha Gratinada" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="product-image-placeholder" style="display:none;">(foto-receita-mussarela.jpg)</div>
+                    <div class="product-info">
+                        <span class="tag tag-dark">Almoço de Domingo</span>
+                        <h3>Macarrão Gratinado com Mussarela</h3>
+                        <p>Prepare o seu macarrão com carne moída e molho de tomate caseiro. Cubra tudo com generosas fatias da nossa Mussarela artesanal e leve ao forno para gratinar. O derretimento é irresistível!</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <h2 class="section-title">Vivência e Transparência</h2>
+            <p class="section-subtitle">Nossas Portas Estão Abertas</p>
+
+            <div class="video-grid">
+                
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls muted loop>
+                            <source src="Hoje tivemos o prazer de receber os alunos do 4º ano da escola Champagnat para conhecer o nosso .mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Visita Guiada e Loja Colaborativa</h3>
+                        <p>Recebemos escolas para mostrar a força do produtor rural. Durante a visita, os alunos aprendem sobre a produção e conhecem nossa loja física, que também é uma <strong>vitrine colaborativa</strong> para produtos artesanais da região, com opções incríveis de presentes.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls muted loop>
+                            <source src="video-banho-queijos-meia-cura.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Dia de Vivência: Faça seu Queijo</h3>
+                        <p>Uma imersão completa. Oferecemos o <strong>Dia de Vivência</strong>, onde você coloca a mão na massa e aprende o ofício de fazer queijo artesanal, participando até do processo do banho dos queijos meia cura.</p>
+                        <a href="https://wa.me/5518997517290?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20e%20agendar%20o%20meu%20Dia%20de%20Viv%C3%AAncia%20no%20Latic%C3%ADnio%20Leite%20J%C3%B3ia." target="_blank" class="btn-primary" style="background-color: var(--navy); color: var(--gold);">🗓️ Agendar Dia de Vivência</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </div>
-  </section>
 
-  <section class="section" style="background:var(--light)">
-    <div class="container">
-      <h2>Produtos em destaque</h2>
-      <div class="products-grid">
-        <article class="product-card">
-          <img src="assets/images/catalogo.png" alt="Mussarela" />
-          <div class="content">
-            <span class="tag">Vaca</span>
-            <h3>Mussarela Artesanal</h3>
-            <p class="muted">Sabor suave e textura macia. Perfeita para o dia a dia.</p>
-            <a class="btn btn-outline" href="produtos.html#linha-vaca">Ver catálogo</a>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="assets/images/catalogo.png" alt="Mussarela de Búfala" />
-          <div class="content">
-            <span class="tag">Búfala</span>
-            <h3>Mussarela de Búfala</h3>
-            <p class="muted">100% leite de búfala: mais proteínas, menos lactose, textura única.</p>
-            <a class="btn btn-outline" href="produtos.html#linha-bufala">Ver catálogo</a>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="assets/images/catalogo.png" alt="Requeijão" />
-          <div class="content">
-            <span class="tag">Especial</span>
-            <h3>Requeijão de Corte</h3>
-            <p class="muted">Cremoso e saboroso, perfeito para acompanhamentos.</p>
-            <a class="btn btn-outline" href="produtos.html">Ver catálogo</a>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="assets/images/catalogo.png" alt="Doce de Leite" />
-          <div class="content">
-            <span class="tag">Doce</span>
-            <h3>Doce de Leite</h3>
-            <p class="muted">Textura cremosa, ideal para sobremesas que encantam.</p>
-            <a class="btn btn-outline" href="produtos.html">Ver catálogo</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-</main>
+    <section class="reseller-section">
+        <h2>Leve o Leite Jóia para sua Casa ou Negócio</h2>
+        <p>Faça sua encomenda para saborear a pureza da nossa região em família, ou torne-se um parceiro revendedor e encante seus clientes.</p>
+        <a href="https://wa.me/5518997517290?text=Ol%C3%A1%21%20Gostaria%20de%20fazer%20uma%20encomenda%20ou%20saber%20mais%20sobre%20os%20produtos%20Leite%20J%C3%B3ia." target="_blank" class="btn-primary" style="background-color: var(--navy); color: var(--white); padding: 15px 30px; font-size: 1.1rem;">Fazer Pedido / Revender</a>
+    </section>
 
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="brand-inline">
-          <img src="assets/images/logo1.png" alt="Leite Jóia logo" />
-          <strong>Leite Jóia</strong>
+    <footer id="onde-encontrar">
+        <div class="footer-container">
+            
+            <div class="footer-col">
+                <img src="DSC_0136.jpg" alt="Produtos Leite Jóia" class="footer-small-img">
+                <span class="footer-logo-text">Leite Jóia</span>
+                <p>A marca do nosso leite. Produtos artesanais, sem aditivos, conectando famílias produtoras a você de forma transparente e justa.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Onde Encontrar</h3>
+                <p><strong>Endereço:</strong><br>Rua Quintino Bocaiúva, s/nº<br>Bairro Itamarati – Adamantina/SP</p>
+                <p>Venha nos visitar e conhecer nossa loja colaborativa e nossos bastidores!</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Fale Conosco</h3>
+                <p><strong>WhatsApp:</strong> (18) 99751-7290</p>
+                <p><strong>Telefone:</strong> (18) 3522-2289</p>
+                <p><strong>E-mail:</strong> leite.joia@terra.com.br</p>
+                <p><strong>Instagram:</strong> @leitejoia</p>
+            </div>
         </div>
-        <p>A marca do nosso leite. Produtos artesanais, sem aditivos, conectando famílias produtoras a você.</p>
-        <p class="small">© 2025 Associação dos Produtores de Leite de Adamantina e Região.</p>
-      </div>
-      <div>
-        <h4>Contato</h4>
-        <ul>
-          <li>Telefone: <a href="tel:+551835222289">(18) 3522-2289</a></li>
-          <li>WhatsApp: 
-  <a href="https://wa.me/5518997517290?text=Ol%C3%A1%20Leite%20J%C3%B3ia,%20quero%20informações%20sobre%20os%20produtos."
-     target="_blank" rel="noopener">
-    (18) 99751-7290
-  </a>
-</li>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Associação dos Produtores de Leite de Adamantina e Região. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-          <li>Email: <a href="mailto:leite.joia@terra.com.br">leite.joia@terra.com.br</a></li>
-          <li>Instagram: <a href="https://instagram.com/leitejoia">@leitejoia</a></li>
-          <li>Endereço: Rua Quintino Bocaiúva, s/nº, Bairro Itamarati – Adamantina/SP</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Links</h4>
-        <ul>
-          <li><a href="produtos.html">Catálogo</a></li>
-          <li><a href="sobre.html#manifesto">Manifesto de propósito</a></li>
-          <li><a href="receitas.html">Receitas</a></li>
-          <li><a href="contato.html">Representantes</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<section class="cta-bar">
-  <div class="container row">
-    <strong>Quer revender Leite Jóia?</strong>
-    <a href="contato.html" class="btn btn-outline" style="background:white;color:var(--primary);">Fale com a gente</a>
-  </div>
-</section>
 </body>
 </html>
